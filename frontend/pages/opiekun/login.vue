@@ -3,7 +3,7 @@
     <v-col cols="12" md="4">
       <v-card>
         <v-card-title class="justify-center">
-          Zaloguj się jako użytkownik
+          Zaloguj się jako opiekun
         </v-card-title>
         <div class="justify-center">
           <login-form @submitForm="loginUser($event)"></login-form>
