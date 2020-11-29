@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer v-model="drawer" fixed app>
       <v-list>
         <v-list-item
@@ -20,10 +20,18 @@
     </v-navigation-drawer>
     <v-app-bar fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title v-text="title" />
+      <NuxtLink to="/">
+        <v-img
+          :src="require(`~/assets/RNR_logo.jpg`)"
+          max-height="60"
+          max-width="60"
+        />
+      </NuxtLink>
+      <v-spacer />
+      <v-btn nuxt to="/" color="secondary"> Wyloguj się </v-btn>
     </v-app-bar>
     <v-main>
-      <v-container>
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-main>
@@ -40,17 +48,17 @@ export default {
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/',
+          title: 'Panel użytkownika',
+          to: '/user',
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire',
+          icon: 'mdi-cash',
+          title: 'Stan konta',
+          to: '/user/srodki',
         },
       ],
       drawer: false,
-      title: 'Vuetify.js',
+      title: "Rak n' Roll",
     }
   },
 }

@@ -6,6 +6,7 @@
           Zaloguj się jako użytkownik
         </v-card-title>
         <div class="justify-center">
+          <!--<login-form @submitForm="loginUser($event)"></login-form>-->
           <login-form @submitForm="loginUser($event)"></login-form>
         </div>
       </v-card>
@@ -18,6 +19,11 @@ import loginForm from '~/components/loginForm.vue'
 
 export default {
   components: { loginForm },
+  methods: {
+    loginUser() {
+      this.$router.push('/user')
+    },
+  },
   /* methods: {
     async loginUser(logininfo) {
       try {
