@@ -56,6 +56,11 @@ export default {
           title: 'Stan konta',
           to: '/user/srodki',
         },
+        {
+          icon: 'mdi-receipt',
+          title: 'Faktury',
+          to: '/user/faktury',
+        },
       ],
       drawer: false,
       title: "Rak n' Roll",
