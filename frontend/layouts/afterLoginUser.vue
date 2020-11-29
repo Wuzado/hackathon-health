@@ -20,7 +20,7 @@
     </v-navigation-drawer>
     <v-app-bar fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <NuxtLink to="/">
+      <NuxtLink to="/user">
         <v-img
           :src="require(`~/assets/RNR_logo.jpg`)"
           max-height="60"
